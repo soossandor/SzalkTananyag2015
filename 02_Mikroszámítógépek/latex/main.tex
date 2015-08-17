@@ -75,6 +75,7 @@
 \usepackage{graphicx}
 \usepackage{fancybox} 
 \usepackage{multicol}
+\usepackage{hyperref}
 
 \only<beamer>{
 %Insert frame number to footline
@@ -133,27 +134,33 @@
 
 
 \only<article>{
-\begin{titlepage}
-
-\begin{center}
-
-%\vspace*{1cm}
-\Large
-\textsc{\maintitle}\\
-
-\vspace{5cm}
-
-%\LARGE
-\textsc{Soós Sándor}\\
-
-\vspace{5cm}
-%\textsc{\today}\\ %%Date - better you write it yourself.
-\textsc{\longdate}\\
-
-\end{center}
-
-\end{titlepage}
+	\begin{titlepage}
+		
+		\begin{center}
+			
+			%\vspace*{1cm}
+			\Large
+			\textsc{\maintitle}\\
+			
+			\vspace{5cm}
+			
+			%\LARGE
+			\textsc{Soós Sándor}\\
+			\vspace{2cm}
+			Nyugat-magyarországi Egyetem\\
+			Simonyi Károly Mûszaki, Faanyagtudományi és Mûvészeti Kar\\
+			Informatikai és Gazdasági Intézet\\
+			\vspace{0.3cm}
+			soossandor@inf.nyme.hu\\
+			\vspace{3cm}
+			%\textsc{\today}\\ %%Date - better you write it yourself.
+			\textsc{\longdate}\\
+			
+		\end{center}
+		
+	\end{titlepage}
 }
+
 
 % If you have a file called "university-logo-filename.xxx", where xxx
 % is a graphic format that can be processed by latex or pdflatex,
@@ -228,11 +235,11 @@
 	
 \end{frame}
 
-\begin{frame}[plain]{A mikroszámítógép felépítése}
+\begin{frame}{A mikroszámítógép felépítése}
 	
 	\begin{figure}[htbp]
 		\centering
-			\includegraphics[width=3in]{images/mikroszamitogep.png}
+			\includegraphics[width=4in]{images/Microcomputer.png}
 		\label{fig:mikroszamitogep}
 	\end{figure}
 	
@@ -272,7 +279,7 @@
 		\item szilicium alapú CMOS technológia
 		\item Cél: minél több alkatrész kerüljön egy chipre
 		\item Elõny: olcsóbb, gyorsabb, kis helyen elfér
-		\item Hátrány: melegedés, meg kell oldani a hûtést
+		\item Hátrány: melegedés, meg kell oldani a hûtést (aktív, passzív)
 	\end{itemize}
 		
 	\begin{table}[htbp]
@@ -352,7 +359,7 @@
 	
 		\begin{itemize}
 			\item $8\dots512$ db 
-			\item méretük a processzor típusától függõen változik: 4 bit $\dots$ 64 bit, ezt nevezzük a processzor szóhosszúságának
+			\item méretük különbözõ lehet: 4 bit $\dots$ 64 bit, ezt nevezzük a processzor szóhosszúságának
 			\item az operatív memóriánál akár 100-szor gyorsabb lehet
 			\item közvetlenül ezekkel dolgozik a processzor, a memóriából betölti az adatokat a regiszterekbe, feldolgozza, visszatölti a memóriába
 		\end{itemize}
@@ -568,7 +575,7 @@
 	
 	\begin{figure}[htbp]
 		\centering
-			\includegraphics[width=4in]{images/bustopology.png}
+			\includegraphics[width=4in]{images/Microcomputer.png}
 		\label{fig:bustopology}
 	\end{figure}
 	
@@ -598,7 +605,7 @@
 		\item VESA (Video Electronics Standards Association)
 		\begin{itemize}
 			\item 32-64 bit
-			\item 40-50 MHz, 132+ MB/s
+			\item 40-50 MHz, 132 MB/s
 		\end{itemize}
 		
 		\item PCI (Peripherial Component Interconnect)
@@ -641,12 +648,36 @@
 	
 \end{frame}
 
+\begin{frame}{USB átviteli sebességek}
+
+	\begin{table}[htbp]
+		\centering
+		\begin{tabular}{|c|c|}
+			\hline
+			USB szabvány & Átviteli sebesség \\
+			\hline
+			\hline
+			USB 1.0 & 12 Mbit/s \\
+			\hline
+			USB 2.0 & 480 Mbit/s \\
+			\hline
+			USB 3.0 & 5 Gbit/s \\
+			\hline
+			USB 3.1 & 10 Gbit/s \\
+			\hline
+		\end{tabular}
+	\end{table}
+
+Forrás: \url{http://en.wikipedia.org/wiki/USB}
+
+\end{frame}
+
 \begin{frame}{Adatátviteli megoldások}
 	
 	\begin{description}
 		\item[Programozott adatátvitel] a perifériával történõ kommunikáció a mikroprocesszor feladata (közben nem csinálhat mást)
 		\item[Megszakításos adatátvitel] a mikroprocesszor közli a feladatot a perifériával, folytatja saját munkáját, a periféria megszakítással jelentkezik be ismét, ha elkészült a feladatával, vagy hiba történt
-		\item[Közvetlen memória hozzáférés] ha az adatátvitel forrása és célja sem a processzor, akkor az a DMA (Direct Memory Access) egység segítségével is lebonyolítható; a processzor csak definiálja a DMA feladatát, adatot nem küld és nem fogad
+		\item[Közvetlen memória hozzáférés] ha sem az adatátvitel forrása, sem a célja nem a processzor, akkor a kommunikáció a DMA (Direct Memory Access) egység segítségével is lebonyolítható; a processzor csak definiálja a DMA feladatát, adatot nem küld és nem fogad
 	\end{description}
 	
 \end{frame}
@@ -670,6 +701,7 @@
 			digitalizáló tábla & projektor & DVD meghajtó\\
 			szkenner & & pendrive \\
 			joystick & & SSD disk \\
+			stb & stb & stb \\
 			\hline
 			\end{tabular}
 	\end{table}
@@ -680,23 +712,17 @@
 	
 	\begin{figure}
 		\centering
-			\includegraphics[height=1in]{images/hdd1.png}
-		\label{fig:hdd1}
+			\includegraphics[width=0.90\textwidth]{images/merevlemez1.jpg}
+		\label{fig:merevlemez}
 	\end{figure}
-		
-	\begin{figure}
-		\centering
-			\includegraphics[width=3in]{images/hdd2.png}
-		\label{fig:hdd2}
-	\end{figure}
-	
+
 \end{frame}
 
 \begin{frame}{A CD meghajtó felépítése}
 	
 	\begin{figure}[htbp]
 		\centering
-			\includegraphics[width=0.50\textwidth]{images/OptikaiOlvaso.jpg}
+			\includegraphics[width=0.70\textwidth]{images/OptikaiOlvaso.jpg}
 		\label{fig:OptikaiOlvaso}
 	\end{figure}
 	
@@ -706,11 +732,17 @@
 	
 	\begin{figure}[htbp]
 		\centering
-			\includegraphics[width=0.80\textwidth]{images/motherboard.png}
+			\includegraphics[width=0.90\textwidth]{images/alaplap.jpg}
 		\label{fig:motherboard}
 	\end{figure}
 	
 \end{frame}
+
+\only<beamer>{
+	\begin{frame}{Összefoglalás}
+		\tableofcontents	
+	\end{frame}
+}
 
 \begin{frame}{Befejezés}
 

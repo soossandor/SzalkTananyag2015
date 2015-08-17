@@ -133,26 +133,31 @@
 
 
 \only<article>{
-\begin{titlepage}
-
-\begin{center}
-
-%\vspace*{1cm}
-\Large
-\textsc{\maintitle}\\
-
-\vspace{5cm}
-
-%\LARGE
-\textsc{Soós Sándor}\\
-
-\vspace{5cm}
-%\textsc{\today}\\ %%Date - better you write it yourself.
-\textsc{\longdate}\\
-
-\end{center}
-
-\end{titlepage}
+	\begin{titlepage}
+		
+		\begin{center}
+			
+			%\vspace*{1cm}
+			\Large
+			\textsc{\maintitle}\\
+			
+			\vspace{5cm}
+			
+			%\LARGE
+			\textsc{Soós Sándor}\\
+			\vspace{2cm}
+			Nyugat-magyarországi Egyetem\\
+			Simonyi Károly Mûszaki, Faanyagtudományi és Mûvészeti Kar\\
+			Informatikai és Gazdasági Intézet\\
+			\vspace{0.3cm}
+			soossandor@inf.nyme.hu\\
+			\vspace{3cm}
+			%\textsc{\today}\\ %%Date - better you write it yourself.
+			\textsc{\longdate}\\
+			
+		\end{center}
+		
+	\end{titlepage}
 }
 
 % If you have a file called "university-logo-filename.xxx", where xxx
@@ -207,7 +212,7 @@
 \begin{frame}{Adat és adatbázis}
 	
 	\begin{itemize}
-		\item Az Excellel is kezeltünk adatokat
+		\item Az Excel-lel is kezeltünk adatokat
 		\item Az adatbázis volt?
 		\item Az Excel adatbázis-kezelõ?
 		\item Mikor válik az adat adatbázissá?
@@ -269,7 +274,7 @@
 		\item Tegye lehetõvé az adatok lekérdezését (lekérdezõ nyelv)
 		\item Legyen lehetõség a különbözõ mûveletek elvégzésének lehetõségét jogosultsági szintekhez kötni
 		\item Mindez megbízhatóan és hatékonyan mûködjön akkor is, ha nagy mennyiségû (elvileg ,,korlátlan'') adatról van szó
-		\item Mindez megbízhatóan mûködjön akkor is, ha egyszerre több felhasználó szeretne mûveleteket végezni
+		\item Mindez megbízhatóan mûködjön akkor is, ha egyszerre \\több felhasználó szeretne mûveleteket végezni
 	\end{enumerate}
 	
 \end{frame}
@@ -338,7 +343,7 @@
 		
 	\begin{enumerate}
 		\item Definiáljunk olyan elemi mûveleteket, amelyek nem szakíthatók félbe, vagy a teljes folyamat lezajlik, vagy nem történik semmi (Tranzakció, Transaction)
-		\item Kritikus mûveletek elvégzésének idejére zároljuk az adatbázis egyes részeit, hogy másik folyamat ne férhessen hozzá (Zárolás, Lock)
+		\item Kritikus mûveletek elvégzésének idejére zároljuk az \\adatbázis egyes részeit, hogy másik folyamat ne \\férhessen hozzá (Zárolás, Lock)
 	\end{enumerate}
 		
 \end{frame}
@@ -375,7 +380,7 @@
 			\item olyan több lépésbõl álló mûveletsor, ami csak egységes egészként hajtható végre
 			\item vagy lefut az egész tranzakció, vagy nem történik semmi
 			\item ha a tranzakció elkezdõdik, de valamilyen okból nem tud szabályosan befejezõdni, akkor a rendszer visszavonja az eddig végrehajtott lépéseket, visszaállítja a tranzakció elindulása elõtti állapotot
-			\item nem csak banki rendszerekben és nem is csak adatbázis-kezelõ rendszerekben használjuk
+			\item nem csak banki rendszerekben és nem is csak \\adatbázis-kezelõ rendszerekben használjuk
 		\end{itemize}
 		
 	\end{itemize}
@@ -691,7 +696,7 @@ Communications of the ACM, 13 (1970), 377-387.
 		\begin{itemize}
 			\item Úgy kell kialakítani a táblákat, hogy új adatok beszúrása, módosítása, régiek törlése esetén is megmaradjon a logikai szerkezete
 			\item Az alapvetõ cél a redundancia csökkentése, lehetõleg teljes megszüntetése
-			\item Ebben az esetben redundancia alatt nem a szövegszerû ismétlõdést értjük, hanem a funkcionális függõség miatt elõálló ismétlõdést
+			\item Ebben az esetben redundancia alatt nem a szövegszerû ismétlõdést értjük, hanem a funkcionális függõség \\miatt elõálló ismétlõdést
 		\end{itemize}
 		
 	\end{itemize}
@@ -897,7 +902,15 @@ Communications of the ACM, 13 (1970), 377-387.
 		\item Ezért jelent minõségi változást az adatbázis az adattáblához képest
 	\end{itemize}
 	
+(Ezekben a példákban az adatbázisok szerkezetére koncentráltunk. Természetesen lehetnek más szempontok is, amelyek felülbírálhatják ezeket a szempontokat. Például a program gyorsabbá tétele érdekében néha engedélyezzük a \\redundanciát.)
+	
 \end{frame}
+
+\only<beamer>{
+	\begin{frame}{Összefoglalás}
+		\tableofcontents	
+	\end{frame}
+}
 
 \begin{frame}{Befejezés}
 

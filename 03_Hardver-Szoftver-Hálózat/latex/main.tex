@@ -133,26 +133,31 @@
 
 
 \only<article>{
-\begin{titlepage}
-
-\begin{center}
-
-%\vspace*{1cm}
-\Large
-\textsc{\maintitle}\\
-
-\vspace{5cm}
-
-%\LARGE
-\textsc{Soós Sándor}\\
-
-\vspace{5cm}
-%\textsc{\today}\\ %%Date - better you write it yourself.
-\textsc{\longdate}\\
-
-\end{center}
-
-\end{titlepage}
+	\begin{titlepage}
+		
+		\begin{center}
+			
+			%\vspace*{1cm}
+			\Large
+			\textsc{\maintitle}\\
+			
+			\vspace{5cm}
+			
+			%\LARGE
+			\textsc{Soós Sándor}\\
+			\vspace{2cm}
+			Nyugat-magyarországi Egyetem\\
+			Simonyi Károly Mûszaki, Faanyagtudományi és Mûvészeti Kar\\
+			Informatikai és Gazdasági Intézet\\
+			\vspace{0.3cm}
+			soossandor@inf.nyme.hu\\
+			\vspace{3cm}
+			%\textsc{\today}\\ %%Date - better you write it yourself.
+			\textsc{\longdate}\\
+			
+		\end{center}
+		
+	\end{titlepage}
 }
 
 % If you have a file called "university-logo-filename.xxx", where xxx
@@ -435,7 +440,7 @@
 			\begin{itemize}
 				\item jelentés, tartalom
 				\item meghatározza, hogy a szintaktikailag helyes programok mit jelentenek
-				\item szemantikai hiba esetén nem kapunk hibaüzenetet, de a program nem azt csinálja, amit várunk tõle
+				\item szemantikai hiba esetén nem kapunk hibaüzenetet, \\de a program nem azt csinálja, amit várunk tõle
 			\end{itemize}
 			
 		\end{enumerate}
@@ -460,13 +465,12 @@
 
 \begin{frame}{Operációs rendszerek}
 
-\emph{A számítógép alapmûködését, az erõforrásaival optimálisan történõ gazdálkodást a felhasználás céljától függetlenül biztosító, általános programok együttese az operációs rendszer
-}
+
 %Legelterjedtebb típusai:
 \begin{itemize}
-	\item \textbf{MS-DOS} (Disk Operating System, 1981-): egyfeladatos, egyfelhasználós (single user, single tasking), assemblyben írták, parancsnyelv bázisú, interpreteres (a kapott utasítást azonnal végrehajtja, ha nem hibás a parancs)
-	\item \textbf{Windows} (1985-): eredetileg egyfelhasználós, többfeladatos (multitasking), újabb változatai (XP) már többfelhasználósak (multiuser) assembly-ben és C-ben írták, grafikus bázisú (ikonok, menü, egér, \dots)
-	\item \textbf{UNIX} (1973-): többfelhasználós, többfeladatos, C-ben írták, nyílt (nyilvános) forráskódú, parancsnyelv bázisú; a PC-ktõl a nagyszámítógépekig használt operációs rendszer.
+	\item \textbf{MS-DOS} (Disk Operating System, 1981-): egyfeladatos, egyfelhasználós (single user, single tasking), assembly-ben írták, parancsnyelv bázisú, interpreteres (a kapott utasítást azonnal végrehajtja, ha nem hibás a parancs)
+	\item \textbf{Windows} (1985-): eredetileg egyfelhasználós, többfeladatos (multitasking), újabb változatai (XP-tõl kezdve) már többfelhasználósak (multiuser) assembly-ben és C-ben írták, grafikus bázisú (ikonok, menü, egér, \dots)
+	\item \textbf{UNIX} (1973-), \textbf{Linux} (1991-): többfelhasználós, többfeladatos, C-ben írták, nyílt (nyilvános) forráskódú, parancsnyelv bázisú; a PC-ktõl a nagyszámítógépekig használt operációs rendszer.
 \end{itemize}
 
 \end{frame}
@@ -552,7 +556,7 @@
 		\item az alkalmazásfejlesztõk számára a legfontosabb operációs rendszer szolgáltatások:
 		
 		\begin{itemize}
-			\item API-k (Application Programming Interface) a különbözõ rendszer erõforrások programozásához
+			\item API-k (Application Programming Interface) a \\különbözõ rendszer erõforrások programozásához
 			\item programok futtatása különbözõ módokon (debug)
 		\end{itemize}
 		
@@ -575,7 +579,7 @@
 		\end{itemize}
 		
 		\item részletesen ismerik a rendszert
-		\item olyan eszközökre van szükségük, amelyekre a többi felhasználónak nincs szüksége és õk nem is érhetik el azokat
+		\item olyan eszközökre van szükségük, amelyekre a többi felhasználónak nincs szüksége és õk nem is \\érhetik el azokat
 		
 	\end{itemize}
 	
@@ -625,7 +629,7 @@
 			
 			\begin{itemize}
 				\item szervervirtualizáció - virtuális szerver
-				\item desktop virtualizáció - virtuális munkaállomás, operációs rendszer
+				\item desktop virtualizáció - virtuális munkaállomás, \\operációs rendszer
 			\end{itemize}
 			
 		\end{itemize}
@@ -669,7 +673,7 @@
 			\item háttértárak, RAID
 			\item hálózat
 			\item adatok, adatbázisok
-			\item Ez növeli a redundanciát
+			\item ez növeli a redundanciát!
 		\end{itemize}
 		
 		\item Kommunikáció, online szolgáltatások elérése
@@ -688,7 +692,7 @@
 		
 		\begin{itemize}
 			\item kis kiterjedésû, épületen belül
-			\item nagy sebességû: 10-100 Mbps (megabit per mp)
+			\item nagy sebességû: 10-100-1000 Mbps
 		\end{itemize}
 		
 		\item MAN (Metropolitan Area Network / Nagyvárosi Hálózat)
@@ -707,7 +711,7 @@
 		
 	\end{itemize}
 	
-	Ez a hagyományos felosztás, ma már csak nagyon speciális esetekben van értelme saját MAN, vagy WAN hálózatot építeni az Internet használata helyett.
+	Ez a hagyományos felosztás, ma már csak nagyon speciális esetekben van értelme saját MAN, vagy WAN hálózatot \\építeni az internet használata helyett.
 	
 \end{frame}
 
@@ -728,7 +732,7 @@
 			\item minden eszköz egy közös bus-ra csatlakozik
 			\item minden eszköznek van egy egyedi címe, a csomagot ezzel címezzük meg
 			\item minden eszköz megkap minden csomagot, kiválasztja a neki szólót
-			\item speciális lezáró elem kell a kábel végére, hogy ne verõdjenek vissza a csomagok
+			\item speciális lezáró elem kell a kábel végére, \\hogy ne verõdjenek vissza a csomagok
 			\item ha bárhol megsérül a kábel, az egész hálózat leáll
 		\end{itemize}
 
@@ -760,8 +764,8 @@
 		
 		\begin{itemize}
 			\item minden eszköz két szomszéddal áll kapcsolatban, a gyûrûnek nincsen végpontja
-			\item a csomagok egy irányban haladnak körbe a gyûrben, amíg el nem érik a címzettet
-			\item ha egy helyen megsérül a kábel, akkor a teljes hálózat leáll
+			\item a csomagok egy irányban haladnak körbe a gyûrûben, amíg el nem érik a címzettet
+			\item ha egy helyen megsérül a kábel, \\akkor a teljes hálózat leáll
 		\end{itemize}
 		
 		\framebreak
@@ -779,7 +783,7 @@
 			\item az egyes ágakat alhálózatoknak nevezzük
 			\item aktív eszközök irányítják a csomagokat
 			\item nagy hálózatok is kialakíthatók hatékonyan
-			\item ha megsérül egy kábel, egy egész alhálózat elérhetetlenné válik
+			\item ha megsérül egy kábel, egy egész alhálózat \\elérhetetlenné válik
 		\end{itemize}
 		
 	\end{enumerate}
@@ -893,14 +897,14 @@
 		\item OSI: Open Systems Interconnection Reference Model, Nyílt rendszerek Összekapcsolása, referencia modell
 
 		\begin{itemize}
-				\item az Internet mûködésének technikai alapja
+				\item az internet mûködésének technikai alapja
 				\item minden eszköz összekapcsolható minden más eszközzel
 				\item Hogyan lehetséges ez?
 				
 				\begin{itemize}
 					\item 7 szintre osztja a hálózati kommunikációt
 					\item minden szint mûködését szabványok rögzítik
-					\item minden szint csak a közvetlenül alatta és felette lévõ réteggel kommunikálhat, nem léphet át más szintekre
+					\item minden szint csak a közvetlenül alatta és felette lévõ \\réteggel kommunikálhat, nem léphet át más szintekre
 				\end{itemize}
 				
 		\end{itemize}
@@ -942,8 +946,8 @@
 \begin{frame}{Miért jó, ha megismerünk egy ilyen rendszert}
 	
 	\begin{itemize}
-		\item Jobban átlátjuk, hogy mi történik a háttérben, amikor szörfölünk az Interneten
-		\item Jobban értjük, amikor aláírjuk a szerzõdést az Internet szolgáltatóval
+		\item Jobban átlátjuk, hogy mi történik a háttérben, amikor szörfölünk az interneten
+		\item Jobban értjük, amikor aláírjuk a szerzõdést az internet szolgáltatóval
 		\item Példa arra, hogy hogyan lehet megtervezni egy nagy rendszert
 		\item Ezt az elvet felhasználhatjuk máshol is
 		\item Példaként lásd a vállalati kommunikációról szóló példát!
@@ -966,7 +970,7 @@
 		
 		\item Manapság minden hagyományos szolgáltatást magába olvasztott a World Wide Web
 		\item Szinte minden szolgáltatást egyetlen böngészõ programból érünk el
-		\item Az e-mail és az FTP maradt használatban részben a www-tól függetlenül is, de ezeknek is megvan a webes megfelelõjük
+		\item Az e-mail és az FTP maradt használatban részben \\a www-tól függetlenül is, de ezeknek is megvan \\a webes megfelelõjük
 		
 		\framebreak
 		
@@ -1003,7 +1007,7 @@
 				\item céges telefonkönyv, a menza étlapja, hírek, megosztott fájlokban a szervereken
 			\end{itemize}
 			
-			\item egyes gépeken, vagy minden gépen van Internet hozzáférés is:
+			\item egyes gépeken, vagy minden gépen van internet hozzáférés is:
 			
 			\begin{itemize}
 				\item webes keresés
@@ -1013,7 +1017,7 @@
 			\end{itemize}
 			
 			\item A cég informatikusai üzemeltetnek egy belsõ hálózatot a munkatársak számára, esetleg belépési lehetõséggel a partnercégek munkatársai számára
-			\item Ehhez kitalálnak, megvalósítanak és üzemeltetnek különbözõ egyedi megoldásokat
+			\item Ehhez kitalálnak, megvalósítanak és üzemeltetnek \\különbözõ egyedi megoldásokat
 		\end{itemize}
 		
 	\end{itemize}
@@ -1023,9 +1027,9 @@
 \begin{frame}{Intranet}
 	
 	\begin{itemize}
-		\item Ötlet: Miért kell más megoldásokat használnunk a belsõ hálózaton, mint amit az Interneten használunk?
-		\item Hagyomány: az Internet elterjedése elõtt épültek ki a helyi hálózatok egyedi technikákkal, más protokollokat használva
-		\item Intranet: olyan belsõ hálózat, ami ugyanazokat a módszereket, hardver és szoftver eszközöket használja, mint az Interneten
+		\item Ötlet: Miért kell más megoldásokat használnunk a belsõ hálózaton, mint amit az interneten használunk?
+		\item Hagyomány: az internet elterjedése elõtt épültek ki a helyi hálózatok egyedi technikákkal, más protokollokat használva
+		\item Intranet: olyan belsõ hálózat, ami ugyanazokat a módszereket, hardver és szoftver eszközöket használja, mint az interneten
 		
 		\begin{itemize}
 			\item TCP-IP protokoll a hálózati eszközök közötti kommunikációhoz
@@ -1045,6 +1049,11 @@
 	
 \end{frame}
 
+\only<beamer>{
+	\begin{frame}{Összefoglalás}
+		\tableofcontents	
+	\end{frame}
+}
 
 \begin{frame}{Befejezés}
 
